@@ -4,8 +4,8 @@
  */
 require('coffee-script');
 
-var express = require('express'),
-    RedisStore = require('connect-redis')(express);
+var express = require('express');
+//    RedisStore = require('connect-redis')(express);
 
 var app = module.exports = express.createServer();
 
