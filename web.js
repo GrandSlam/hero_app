@@ -2,7 +2,7 @@
 /**
  * Module dependencies.
  */
-//require('coffee-script');
+require('coffee-script');
 
 var express = require('express'),
     RedisStore = require('connect-redis')(express);
@@ -29,8 +29,9 @@ app.configure('production', function(){
 });
 
 // Routes
+require('./apps/authentication/routes')(app)
 
-app.get('/', routes.index);
+
 var port = process.env.PORT || 5000;
 app.listen(port, function() {
   console.log("Listening on " + port);
